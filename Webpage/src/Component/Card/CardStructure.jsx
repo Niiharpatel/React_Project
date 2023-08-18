@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import "./Card.css";
 
 function CardStructure({ data }) {
@@ -7,7 +7,7 @@ function CardStructure({ data }) {
         <>
             <div className="Cardmain">
 
-                <img src={data?.img} />
+                    <img src={data?.img} />
 
                 <div className='card_det'>
                     <div className="inner-det">
@@ -26,4 +26,4 @@ function CardStructure({ data }) {
     );
 }
 
-export default CardStructure
+export default CardStructure;

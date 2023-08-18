@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import './NavigatioBar.css';
 import { UserCircle } from 'lucide-react';
+import { Router, Routes } from 'react-router';
 
 function NavigationBar({ setSearchText, search }) {
     return (
@@ -14,8 +15,8 @@ function NavigationBar({ setSearchText, search }) {
                     <Navbar.Brand href="#home"><a href=""><img src="https://websitedemos.net/love-nature-02/wp-content/uploads/sites/988/2021/11/logo-white.svg" style={{ width: "70px", height: "72px" }} alt="" /></a></Navbar.Brand>
 
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="../Plant/Plant.jsx">Plant</Nav.Link>
+                        <Nav.Link to='/' href="">Home</Nav.Link>
+                        <Nav.Link href="#plant">Plant</Nav.Link>
                         <Nav.Link href="#services">About</Nav.Link>
                         <Nav.Link href="#contact">Contact</Nav.Link>
 
@@ -43,7 +44,6 @@ function NavigationBar({ setSearchText, search }) {
                                 <a href=""><UserCircle size={28} strokeWidth={1.5} /></a>
                             </div>
 
-
                         </div>
 
                     </Form>
@@ -51,7 +51,7 @@ function NavigationBar({ setSearchText, search }) {
             </Navbar>
 
         </>
-    )
+    );
 }
 
-export default NavigationBar
+export default NavigationBar;

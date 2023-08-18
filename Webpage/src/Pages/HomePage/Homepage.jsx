@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react';
 import './Homepage.css';
-import Button from 'react-bootstrap/esm/Button';
-import NavigationBar from '../Navbar/NavigationBar';
-import CardStructure from '../Card/CardStructure';
-import "../Card/Card.css";
-import HomeData from './HomeData.json'
-import PlantData from '../../Utils/PlantData.json'
-import TestimonialMap from '../Testimonial/TestimonialMap';
-import Footer from '../Footer/Footer';
-import WebSlider from '../Slider/WebSlider';
-import Ourstory from '../OurStory/Ourstory';
-import GiftCardCom from '../GiftCard/GiftCardCom';
+
+import { Button } from 'react-bootstrap';
+import "../../Component/Card/Card.css";
+import HomeData from './HomeData.json';
+import NavigationBar from '../../Component/Navbar/NavigationBar';
+import CardStructure from '../../Component/Card/CardStructure';
+import TestimonialMap from '../../Component/Testimonial/TestimonialMap';
+import Ourstory from '../../Component/OurStory/Ourstory';
+import GiftCardCom from '../../Component/GiftCard/GiftCardCom';
+import Footer from '../../Component/Footer/Footer';
 
 function Homepage() {
 
@@ -49,7 +48,7 @@ function Homepage() {
                 {
 
                     data?.map?.((e, i) => {
-                        return <CardStructure data={e} key={i} />
+                        return <CardStructure data={e} key={i} />;
 
 
                     })
@@ -68,7 +67,7 @@ function Homepage() {
 
 
         </>
-    )
+    );
 }
 
-export default Homepage
+export default Homepage;
