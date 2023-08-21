@@ -26,29 +26,29 @@ export default function Plant() {
 
     }, [searchText]);
 
-    return (     
+    return (
 
-            <>
-                {/* Header-------------------------------- */}
-                <div className="plant-navbar">
-                    <NavigationBar search={true} setSearchText={setSearchText} />
-                </div>
-
-
-                <div className="plant-main">
-                    {plantData.map((e) => {
-                        return <CardStructure data={e} />;
-                    })}
-                </div>
+        <>
+            {/* Header-------------------------------- */}
+            <div className="plant-navbar">
+                <NavigationBar search={true} setSearchText={setSearchText} />
+            </div>
 
 
+            <div className="plant-main">
+                {plantData.map((e) => {
+                    return <CardStructure data={e} />;
+                })}
+            </div>
 
-                {/* Footer------------------------------- */}
-                <div className="plant-footer">
-                    <Footer />
-                </div>
-            </>
-        
+
+
+            {/* Footer------------------------------- */}
+            <div className="plant-footer">
+                <Footer />
+            </div>
+        </>
+
 
     );
 }
