@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Homepage.css';
 
 import { Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+
 import "../../Component/Card/Card.css";
 import HomeData from './HomeData.json';
 import NavigationBar from '../../Component/Navbar/NavigationBar';
@@ -34,7 +36,7 @@ function Homepage() {
                         <div className="heading2"><h1>Your Home</h1></div>
 
                         <div className="btn-hompage">
-                            <a href=""><Button variant="light">Shop Now</Button></a>
+                            <NavLink to={"/plant"}><a href=""><Button variant="light">Shop Now</Button></a></NavLink>
                         </div>
                     </div>
                 </div>

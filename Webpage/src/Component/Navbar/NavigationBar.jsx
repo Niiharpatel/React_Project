@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import './NavigatioBar.css';
 import { UserCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function NavigationBar({ setSearchText, search }) {
     return (
@@ -13,12 +13,12 @@ function NavigationBar({ setSearchText, search }) {
             <Navbar>
                 <Container>
                     <Navbar.Brand href="#home"><a href=""><img src="https://websitedemos.net/love-nature-02/wp-content/uploads/sites/988/2021/11/logo-white.svg" style={{ width: "70px", height: "72px" }} alt="" /></a></Navbar.Brand>
-                    
+
                     <Nav className="me-auto">
-                        <Link to={"/"} style={{ color: "white", textDecoration: "none" }}>Home</Link>
-                        <Link to={"/plant"} style={{ color: "white", textDecoration: "none" }}>Plant</Link>
-                        <Link to={"/about"} style={{ color: "white", textDecoration: "none" }}>About</Link>
-                        <Link to={"/contact"} style={{ color: "white", textDecoration: "none" }}>Contact</Link>
+                        <NavLink to={"/"} style={{ color: "white", textDecoration: "none" }}>Home</NavLink>
+                        <NavLink to={"/plant"} style={{ color: "white", textDecoration: "none" }}>Plant</NavLink>
+                        <NavLink to={"/about"} style={{ color: "white", textDecoration: "none" }}>About</NavLink>
+                        <NavLink to={"/contact"} style={{ color: "white", textDecoration: "none" }}>Contact</NavLink>
                     </Nav>
 
 

@@ -1,5 +1,6 @@
 .navbar {
   background-color: transparent !important;
+  backdrop-filter: blur(5px);
 }
 
 .nav-link {
@@ -72,3 +73,7 @@ sup {
   color: white;
 }
 
+.active {
+  color: red !important;
+  font-weight: bold;
+}
