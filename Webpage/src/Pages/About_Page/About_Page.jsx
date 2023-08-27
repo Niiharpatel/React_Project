@@ -11,9 +11,9 @@ import Footer from '../../Component/Footer/Footer';
 export default function About_Page() {
     return (
         <>
-            <div className="about-page-flex">
+            {/* <div className="about-page-flex">
                 <NavigationBar />
-            </div>
+            </div> */}
 
             <div className="about-page-component-main-pad">
 
@@ -26,7 +26,7 @@ export default function About_Page() {
                 <AboutPageCom4 />
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
 
 
 

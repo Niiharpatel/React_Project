@@ -21,7 +21,7 @@ function CardStructure({ data }) {
                 </div>
 
                 <div className="cart-logo">
-                    <acronym title="Add to cart"> <a href=""> <i class="fa-solid fa-cart-arrow-down"></i></a></acronym>
+                    <acronym title="Add to cart"> <a href=""> <i className="fa-solid fa-cart-arrow-down"></i></a></acronym>
                 </div>
             </div>
         </>

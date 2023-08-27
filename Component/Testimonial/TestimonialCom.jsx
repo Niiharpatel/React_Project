@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './TestimonialCom.css';
 
 function TestimonialCom(props) {
@@ -7,7 +7,7 @@ function TestimonialCom(props) {
 
             <div className="testi-main">
                 <div className="testi-quote">
-                    <i class="fa-solid fa-quote-left"></i>
+                    <i className="fa-solid fa-quote-left"></i>
                 </div>
                 <dir className='comments'>
                     <p>Sed odio donec curabitur auctor amet tincidunt non odio enim felis tincidunt amet morbi egestas hendrerit.</p>
@@ -26,7 +26,7 @@ function TestimonialCom(props) {
             </div>
 
         </>
-    )
+    );
 }
 
-export default TestimonialCom
+export default TestimonialCom;

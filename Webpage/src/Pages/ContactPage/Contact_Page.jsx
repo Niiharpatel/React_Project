@@ -8,16 +8,16 @@ import Footer from '../../Component/Footer/Footer';
 export default function Contact_Page() {
     return (
         <>
-            <div className="bg-color-contactPage">
+            {/* <div className="bg-color-contactPage">
                 <NavigationBar />
-            </div>
+            </div> */}
 
 
             <ContactPageCom1 />
 
             <ContactPageCom2 />
 
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }

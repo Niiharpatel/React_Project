@@ -21,13 +21,9 @@ function Homepage() {
     return (
         <>
 
-            <div className="main" style={{ position: "relative" }}>
+            <div className="main" style={{ top: "0" }}>
 
-                <div style={{ position: "absolute", top: "0px", width: "100%" }}>
 
-                    <NavigationBar search={false} />
-
-                </div>
 
                 <div className="bg-img">
                     <div className="home-content">
@@ -65,7 +61,7 @@ function Homepage() {
             <GiftCardCom />
 
 
-            <Footer />
+            {/* <Footer /> */}
 
 
         </>

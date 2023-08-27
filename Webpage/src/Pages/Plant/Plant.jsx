@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './Plant.css';
 import PlantData from '../../Utils/PlantData.json';
-import NavigationBar from '../../Component/Navbar/NavigationBar';
 import CardStructure from '../../Component/Card/CardStructure';
 import Footer from '../../Component/Footer/Footer';
+import { userAuth } from '../Auth/Auth';
 
 
 export default function Plant() {
 
-
+    const { searchText } = userAuth();
     let [plantData, setPlantData] = useState([]);
-
-    let [searchText, setSearchText] = useState('');
 
     useEffect(() => {
 
@@ -30,9 +28,9 @@ export default function Plant() {
 
         <>
             {/* Header-------------------------------- */}
-            <div className="plant-navbar">
+            {/* <div className="plant-navbar">
                 <NavigationBar search={true} setSearchText={setSearchText} />
-            </div>
+            </div> */}
 
 
             <div className="plant-main">
@@ -43,10 +41,10 @@ export default function Plant() {
 
 
 
-            {/* Footer------------------------------- */}
+            {/* Footer-------------------------------
             <div className="plant-footer">
                 <Footer />
-            </div>
+            </div> */}
         </>
 
 

@@ -333,5 +333,14 @@
     "price": "$3.60",
     "description3": "Herbs seeds",
     "category": "plant"
+  },
+  {
+    "img": "https://themewagon.github.io/alazea/img/bg-img/40.png",
+    "name": "Cactus Flower",
+    "description1": "Luctus nec ullamcorper mattis,",
+    "description2": "pulvinar dapibus leo",
+    "price": "$10.99",
+    "description3": "Herbs seeds",
+    "category": "plant"
   }
 ]

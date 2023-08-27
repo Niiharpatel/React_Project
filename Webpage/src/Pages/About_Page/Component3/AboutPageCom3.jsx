@@ -29,7 +29,7 @@ export default function AboutPageCom3() {
                                 </div>
                                 <div className="line-4">
                                     <div className="logo">
-                                        <i class="fa-solid fa-quote-left"></i>
+                                        <i className="fa-solid fa-quote-left"></i>
                                     </div>
                                     <div className="para">
                                         <h6>

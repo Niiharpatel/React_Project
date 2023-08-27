@@ -1,0 +1,25 @@
+.form-bg {
+  background-image: url("https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.form-set {
+  padding: 100px 424px;
+  width: fit-content;
+}
+
+.form {
+  background-color: transparent;
+}
+
+.loginform-in {
+  width: 500px !important;
+}
+
+.loginform-heading {
+  font-family: emoji;
+  font-size: 50px !important;
+  padding-bottom: 50px;
+}

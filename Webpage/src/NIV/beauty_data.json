@@ -1,0 +1,38 @@
+[
+  {
+    "img": "https://websitedemos.net/plant-store-02/wp-content/uploads/sites/410/2019/01/plant6-free-img.jpg",
+    "name": "Rattle Snake Tail",
+    "Description": "Air purifying",
+    "gender": "Male"
+  },
+  {
+    "img": "https://websitedemos.net/plant-store-02/wp-content/uploads/sites/410/2019/01/cactus2-free-img.jpg",
+    "name": "Cleistocactus",
+    "Description": "Air purifying",
+    "gender": "Male"
+  },
+  {
+    "img": "https://websitedemos.net/plant-store-02/wp-content/uploads/sites/410/2019/01/plant4-free-img.jpg",
+    "name": "Piorro Quisquam",
+    "Description": "Air purifying",
+    "gender": "Male"
+  },
+  {
+    "img": "https://websitedemos.net/plant-store-02/wp-content/uploads/sites/410/2019/01/plant3-free-img.jpg",
+    "name": "Boncellensis Secullant",
+    "Description": "Air purifying",
+    "gender": "Male"
+  },
+  {
+    "img": "https://websitedemos.net/plant-store-02/wp-content/uploads/sites/410/2019/01/plant3-free-img.jpg",
+    "name": "Boncellensis Secullant",
+    "Description": "Air purifying",
+    "gender": "Female"
+  },
+  {
+    "img": "https://websitedemos.net/plant-store-02/wp-content/uploads/sites/410/2019/01/plant3-free-img.jpg",
+    "name": "Boncellensis Secullant",
+    "Description": "Air purifying",
+    "gender": "Female"
+  }
+]

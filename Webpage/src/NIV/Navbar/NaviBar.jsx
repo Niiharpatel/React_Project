@@ -1,11 +1,8 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import './NavigatioBar.css';
+import { UserCircle } from 'lucide-react';
+import { Container, Form, Nav, Navbar } from 'react-bootstrap';
 
-function NavigationBar() {
+function NaviBar({ setSearchData }) {
     return (
         <>
             <Navbar>
@@ -13,12 +10,12 @@ function NavigationBar() {
                     <Navbar.Brand href="#home"><a href=""><img src="https://websitedemos.net/love-nature-02/wp-content/uploads/sites/988/2021/11/logo-white.svg" style={{ width: "70px", height: "72px" }} alt="" /></a></Navbar.Brand>
 
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#about">Plant</Nav.Link>
-                        <Nav.Link href="#services">About</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
-
+                        <a style={{ color: "white", textDecoration: "none" }}>Home</a>
+                        <a style={{ color: "white", textDecoration: "none" }}>Plant</a>
+                        <a style={{ color: "white", textDecoration: "none" }}>About</a>
+                        <a style={{ color: "white", textDecoration: "none" }}>Contact</a>
                     </Nav>
+
 
                     <Form inline>
                         <div className="nav-right-content">
@@ -30,19 +27,26 @@ function NavigationBar() {
                                     <a href=""><i className="fa-solid fa-cart-shopping"><sup> 0</sup></i></a>
                                 </div>
                             </div>
-                            <div className="box-2">
-                                <input type="text" placeholder='Find your plants here!' />
-                            </div>
 
+                            {
+
+                                <div className="box-2">
+                                    <input type="text" placeholder='Find Your Plants Here!' onChange={(e) => setSearchData(e?.target?.value)} />
+                                </div>
+                            }
+
+                            <div className="user-icon">
+                                <a href=""><UserCircle size={28} strokeWidth={1.5} /></a>
+                            </div>
 
                         </div>
 
                     </Form>
                 </Container>
-            </Navbar>
+            </Navbar >
 
         </>
     );
 }
 
-export default NavigationBar;
+export default NaviBar;

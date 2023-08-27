@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import "./Card.css";
 
 function CardStructure(props) {
@@ -20,7 +20,7 @@ function CardStructure(props) {
 
                 <div className="cart-logo">
                     <abbr title="Add to cart">
-                        <a href=""> <i class="fa-solid fa-cart-arrow-down"></i></a>
+                        <a href=""> <i className="fa-solid fa-cart-arrow-down"></i></a>
                     </abbr>
                 </div>
             </div>
@@ -30,4 +30,4 @@ function CardStructure(props) {
     );
 }
 
-export default CardStructure
+export default CardStructure;
