@@ -12,7 +12,7 @@ function NavigationBar() {
 
     const navigate = useNavigate();
     const { user, logout, setSearchText } = userAuth();
-    console.log("NavigationBar  user", user);
+
     return (
         <>
             <Navbar bg='dark'>
@@ -47,16 +47,12 @@ function NavigationBar() {
 
                             <div className="user-icon">
                                 {
-                                    user ?
-                                        <a href="" onClick={() => logout()}><Button variant="outline-light">LogOut</Button></a>
-                                        :
-                                        <a href="" onClick={() => navigate('/loginform')}><Button variant="outline-light">Login</Button></a>
+                                    user ? (<a href="" onClick={() => logout()}><Button variant="outline-light">LogOut</Button></a>) : (<a href="" onClick={() => navigate('/loginform')}><Button variant="outline-light">Login</Button></a>)
+
                                 }
 
                             </div>
-
                         </div>
-
                     </Form>
                 </Container>
             </Navbar >
@@ -64,5 +60,6 @@ function NavigationBar() {
         </>
     );
 }
+
 
 export default NavigationBar;

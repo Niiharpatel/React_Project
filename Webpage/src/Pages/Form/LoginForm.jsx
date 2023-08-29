@@ -5,6 +5,7 @@ import { userAuth } from '../Auth/Auth';
 
 export default function LoginForm() {
 
+
     let [user, setUser] = useState({
         email: "",
         password: ""
@@ -12,11 +13,10 @@ export default function LoginForm() {
 
 
     let Auth = userAuth();
-    console.log("LoginForm  Auth", Auth);
 
     function addData() {
-        console.log("addData  user", user);
         Auth.login(user);
+
     }
 
     return (

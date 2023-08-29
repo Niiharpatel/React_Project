@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { json, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 
 
@@ -31,15 +31,17 @@ export default function Auth({ children }) {
 
             setUser(JSON.parse(data));
         }
+
     }, []);
 
     return (
 
         <>
             <AuthContext.Provider value={{ login, logout, user, searchText, setSearchText }}>
-                {children}
-            </AuthContext.Provider>
 
+                {children}
+
+            </AuthContext.Provider>
 
         </>
     );
