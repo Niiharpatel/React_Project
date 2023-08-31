@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Homepage.css';
 
 import { Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import "../../Component/Card/Card.css";
 import HomeData from './HomeData.json';
@@ -17,7 +17,7 @@ function Homepage() {
 
     let [data, setData] = useState(HomeData);
 
-
+    const navigate = useNavigate();
     return (
         <>
 
@@ -31,8 +31,7 @@ function Homepage() {
                         <div className="heading1"><h1>Let’s Bring the Spring to</h1></div>
                         <div className="heading2"><h1>Your Home</h1></div>
 
-                        <div className="btn-hompage">
-                            <NavLink to={"/plant"}><a href=""><Button variant="light">Shop Now</Button></a></NavLink>
+                        <div className="btn-hompage"><Button onClick={() => navigate("/plant")} variant="light">Shop Now</Button>
                         </div>
                     </div>
                 </div>

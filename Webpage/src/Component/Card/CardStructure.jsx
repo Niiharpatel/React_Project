@@ -16,7 +16,7 @@ function CardStructure({ data }) {
                         <h4>{data?.name}</h4>
                         <p className='card-desc3'>{data?.description3}</p>
                         <span className='card-price'>{data?.price}</span>
-                        <a onClick={() => Navigate('/plant')}><h6 className='card_det-link'>{data?.link}</h6></a>
+                        <h6 onClick={() => Navigate('/plant')} className='card_det-link'>{data?.link}</h6>
                     </div>
                 </div>
 

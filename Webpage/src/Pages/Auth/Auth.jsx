@@ -17,21 +17,20 @@ export default function Auth({ children }) {
 
     function login(userData) {
         localStorage.setItem("loginUser", JSON.stringify(userData));
+        setUser(userData);
         navigate('/');
     }
 
     function logout() {
         localStorage.removeItem("loginUser");
+        setUser(null);
         navigate('/');
     }
-
     useEffect(() => {
         let data = localStorage.getItem("loginUser");
         if (data) {
-
             setUser(JSON.parse(data));
         }
-
     }, []);
 
     return (

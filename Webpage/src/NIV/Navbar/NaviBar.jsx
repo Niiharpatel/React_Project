@@ -17,7 +17,7 @@ function NaviBar({ setSearchData }) {
                     </Nav>
 
 
-                    <Form inline>
+                    <Form >
                         <div className="nav-right-content">
                             <div className="box-1">
                                 <div className="currency">

@@ -1,8 +1,9 @@
 import React from 'react';
 import './Ourstory.css';
-import { NavLink } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 function Ourstory() {
+    const navigate = useNavigate();
     return (
         <>
             <div className="our-story-main">
@@ -19,8 +20,7 @@ function Ourstory() {
                                 <div className="line5">
                                     <p>Facilisis eu faucibus diam cursus pulvinar consectetur purus sem felis, mauris consectetur nisl vitae gravida ultricies sem condimentum aliquet ut sed gravida amet vitae euismod pulvinar volutpat laoreet pharetra.</p>
                                 </div>
-                                <div className="line6">
-                                    <NavLink to={"/about"}> <button className='our-story-btn'>Read More</button></NavLink>
+                                <div className="line6"> <button className='our-story-btn' onClick={() => navigate("/aboout")}>Read More</button>
                                 </div>
                             </div>
                         </div>

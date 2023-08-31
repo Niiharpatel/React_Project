@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,15 +9,14 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { userAuth } from '../../Pages/Auth/Auth';
 
 function NavigationBar() {
-
     const navigate = useNavigate();
-    const { user, logout, setSearchText } = userAuth();
+    let { user, logout, setSearchText } = userAuth();
 
     return (
         <>
             <Navbar bg='dark'>
                 <Container>
-                    <Navbar.Brand href="#home"><a href=""><img src="https://websitedemos.net/love-nature-02/wp-content/uploads/sites/988/2021/11/logo-white.svg" style={{ width: "70px", height: "72px" }} alt="" /></a></Navbar.Brand>
+                    <Navbar.Brand href="#home"><img src="https://websitedemos.net/love-nature-02/wp-content/uploads/sites/988/2021/11/logo-white.svg" style={{ width: "70px", height: "72px" }} alt="" /></Navbar.Brand>
 
                     <Nav className="me-auto">
                         <NavLink to={"/"} style={{
@@ -29,7 +28,7 @@ function NavigationBar() {
                     </Nav>
 
 
-                    <Form inline>
+                    <Form >
                         <div className="nav-right-content">
                             <div className="box-1">
                                 <div className="currency">
@@ -47,7 +46,7 @@ function NavigationBar() {
 
                             <div className="user-icon">
                                 {
-                                    user ? (<a href="" onClick={() => logout()}><Button variant="outline-light">LogOut</Button></a>) : (<a href="" onClick={() => navigate('/loginform')}><Button variant="outline-light">Login</Button></a>)
+                                    user?.email ? (<Button onClick={() => logout()} variant="outline-light">LogOut</Button>) : (<Button onClick={() => navigate('/loginform')} variant="outline-light">Login</Button>)
 
                                 }
 

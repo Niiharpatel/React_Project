@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
-import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
+import { Form, FormGroup, Input, Label } from 'reactstrap';
 import { userAuth } from '../Auth/Auth';
 
 export default function LoginForm() {
@@ -24,7 +24,8 @@ export default function LoginForm() {
             <div className="form-bg">
                 <div className="form-set">
 
-                    <marquee behavior="alternate" direction="right" scrollamount="" > <h1 className='loginform-heading'>Welcome User</h1></marquee>
+                    <h1 className='loginform-heading animate__animated animate__pulse animate__infinite	infinite' style={{ color: "white", textAlign: "center" }}>Welcome User</h1>
+
                     <Form className='form'>
                         <FormGroup floating>
                             <Input className='loginform-in'
@@ -62,8 +63,10 @@ export default function LoginForm() {
                                 id="exampleCheckbox"
                                 name="checkbox"
                                 type="checkbox"
+
                             />
                             <Label
+
                                 check
                                 for="exampleCheckbox"
                             >
@@ -71,9 +74,12 @@ export default function LoginForm() {
                             </Label>
                         </FormGroup>
                         {' '}
-                        <Button style={{ backgroundColor: "green", width: "90px", marginTop: "10px" }} onClick={() => addData()}>
+
+
+                        <button
+                            className='form-btn' onClick={() => addData()}>
                             Login
-                        </Button>
+                        </button>
                     </Form>
                 </div>
             </div>
