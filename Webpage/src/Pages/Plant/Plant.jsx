@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './Plant.css';
 import PlantData from '../../Utils/PlantData.json';
 import CardStructure from '../../Component/Card/CardStructure';
-import Footer from '../../Component/Footer/Footer';
 import { userAuth } from '../Auth/Auth';
 
 
@@ -34,8 +33,8 @@ export default function Plant() {
 
 
             <div className="plant-main">
-                {plantData.map((e) => {
-                    return <CardStructure data={e} />;
+                {plantData.map((e, i) => {
+                    return <CardStructure data={e} key={i} />;
                 })}
             </div>
 

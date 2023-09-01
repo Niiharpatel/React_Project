@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { userAuth } from '../Auth/Auth';
 import { useNavigate } from 'react-router';
+import '../ProtectedRoute/ProtectedRoute.css';
 
 export default function ProtectedRoute({ component }) {
+
     let { user } = userAuth();
     let navigate = useNavigate();
 
@@ -10,15 +12,14 @@ export default function ProtectedRoute({ component }) {
 
     useEffect(() => {
         if (!user) {
-            navigate('/LoginForm');
+            navigate('/alertbox');
 
-            // alert("Please Login to access the Website!! Thank You.");
         }
 
     }, []);
     return (
         <>
-                {component}
+            {component}
 
         </>
     );

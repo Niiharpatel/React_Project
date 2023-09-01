@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { Alert } from 'react-bootstrap';
 import { useNavigate } from 'react-router';
 
 
@@ -26,6 +27,8 @@ export default function Auth({ children }) {
         setUser(null);
         navigate('/');
     }
+
+    
     useEffect(() => {
         let data = localStorage.getItem("loginUser");
         if (data) {
@@ -36,7 +39,7 @@ export default function Auth({ children }) {
     return (
 
         <>
-            <AuthContext.Provider value={{ login, logout, user, searchText, setSearchText }}>
+            <AuthContext.Provider value={{ login, logout, user, searchText, setSearchText, alert }}>
 
                 {children}
 

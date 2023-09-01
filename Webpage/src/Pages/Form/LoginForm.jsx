@@ -26,10 +26,10 @@ export default function LoginForm() {
 
                     <h1 className='loginform-heading animate__animated animate__pulse animate__infinite	infinite' style={{ color: "white", textAlign: "center" }}>Welcome User</h1>
 
-                    <Form className='form'>
+                    <Form className='form' id='login-form' >
                         <FormGroup floating>
-                            <Input className='loginform-in'
-                                required
+                            <Input
+                                className='loginform-in'
                                 id="exampleEmail"
                                 name="email"
                                 placeholder="Email"
@@ -44,7 +44,6 @@ export default function LoginForm() {
                         {' '}
                         <FormGroup floating>
                             <Input
-                                required
                                 id="examplePassword"
                                 name="password"
                                 placeholder="Password"
@@ -76,8 +75,7 @@ export default function LoginForm() {
                         {' '}
 
 
-                        <button
-                            className='form-btn' onClick={() => addData()}>
+                        <button className='form-btn' onClick={() => addData()}>
                             Login
                         </button>
                     </Form>
@@ -86,3 +84,77 @@ export default function LoginForm() {
         </>
     );
 }
+
+
+
+
+
+
+
+
+{/* <Form>
+   
+    <FormGroup>
+        <Label for="exampleEmail">
+            Valid input
+        </Label>
+        <Input valid />
+        <FormFeedback valid>
+            Sweet! that name is available
+        </FormFeedback>
+        <FormText>
+            Example help text that remains unchanged.
+        </FormText>
+    </FormGroup>
+    <FormGroup>
+        <Label for="examplePassword">
+            Invalid input
+        </Label>
+        <Input invalid />
+        <FormFeedback>
+            Oh noes! that name is already taken
+        </FormFeedback>
+        <FormText>
+            Example help text that remains unchanged.
+        </FormText>
+    </FormGroup>
+    <FormGroup>
+        <Label for="exampleEmail">
+            Input without validation
+        </Label>
+        <Input />
+        <FormFeedback tooltip>
+            You will not be able to see this
+        </FormFeedback>
+        <FormText>
+            Example help text that remains unchanged.
+        </FormText>
+    </FormGroup>
+    <FormGroup className="position-relative">
+        <Label for="exampleEmail">
+            Valid input
+        </Label>
+        <Input valid />
+        <FormFeedback
+            tooltip
+            valid
+        >
+            Sweet! that name is available
+        </FormFeedback>
+        <FormText>
+            Example help text that remains unchanged.
+        </FormText>
+    </FormGroup>
+    <FormGroup className="position-relative">
+        <Label for="examplePassword">
+            Invalid input
+        </Label>
+        <Input invalid />
+        <FormFeedback tooltip>
+            Oh noes! that name is already taken
+        </FormFeedback>
+        <FormText>
+            Example help text that remains unchanged.
+        </FormText>
+    </FormGroup>
+</Form>; */}

@@ -10,12 +10,13 @@ import Auth from './Pages/Auth/Auth';
 import NavigationBar from './Component/Navbar/NavigationBar';
 import Footer from './Component/Footer/Footer';
 import ProtectedRoute from './Pages/ProtectedRoute/ProtectedRoute';
+import AlertBox from './Component/AlertBox/AlertBox';
 
 export default function Router() {
     return (
         <>
             <BrowserRouter>
-                
+
                 <Auth>
 
                     <NavigationBar />
@@ -27,6 +28,7 @@ export default function Router() {
                         <Route path='/about' element={<ProtectedRoute component={<About_Page />} />} />
                         <Route path='/contact' element={<ProtectedRoute component={<Contact_Page />} />} />
                         <Route path='/LoginForm' element={<LoginForm />} />
+                        <Route path='/alertbox' element={<AlertBox />} />
                         <Route path='*' element={<Error_404 />} />
 
                     </Routes>
