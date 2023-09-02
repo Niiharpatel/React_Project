@@ -12,6 +12,11 @@ import Ourstory from '../../Component/OurStory/Ourstory';
 import GiftCardCom from '../../Component/GiftCard/GiftCardCom';
 import { userAuth } from '../Auth/Auth';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
 function Homepage() {
 
     let [data, setData] = useState(HomeData);
@@ -51,24 +56,32 @@ function Homepage() {
             </div>
 
 
+            <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="50">
+                <div className='card-flex'>
+                    {
 
-            <div className='card-flex'>
-                {
-
-                    data?.map?.((e, i) => {
-                        return <CardStructure data={e} key={i} />;
-
-
-                    })
-                }
+                        data?.map?.((e, i) => {
+                            return <CardStructure data={e} key={i} />;
+                        })
+                    }
+                </div>
             </div>
 
-            <Ourstory />
+
+            <div data-aos="flip-up" data-aos-easing="ease-in-out" data-aos-delay="90">
+
+                <Ourstory />
+
+            </div>
+
+            <div data-aos="slide-right" data-aos-easing="ease-in-out" data-aos-delay="70">
+                <TestimonialMap />
+            </div>
 
 
-            <TestimonialMap />
-
-            <GiftCardCom />
+            <div data-aos="fade-out" data-aos-easing="ease-in-out" data-aos-delay="500">
+                <GiftCardCom />
+            </div>
 
 
 
