@@ -1,9 +1,25 @@
-import React from 'react'
-import './GiftCard.css'
+import React from 'react';
+import './GiftCard.css';
+import { useNavigate } from 'react-router';
+import { userAuth } from '../../Pages/Auth/Auth';
 
 
 
 export default function GiftCardCom() {
+
+    const Navigate = useNavigate();
+
+    let { user } = userAuth();
+
+    function GiftNav() {
+
+        if (!user) {
+            Navigate('/alertbox');
+
+        } else {
+            Navigate('/giftcard');
+        }
+    }
     return (
         <>
             <div className="giftcard-main">
@@ -19,7 +35,7 @@ export default function GiftCardCom() {
                             <p>Pretium tortor risus enim neque quis pellentesque maecenas proin odio eget arcu</p>
                         </div>
                         <div className="giftcard-content-line4">
-                            <button>Purchase A Gift Card</button>
+                            <button onClick={() => GiftNav()}>Purchase A Gift Card</button>
                         </div>
 
                     </div>
@@ -27,5 +43,5 @@ export default function GiftCardCom() {
             </div>
 
         </>
-    )
+    );
 }

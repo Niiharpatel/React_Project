@@ -46,7 +46,7 @@ function NavigationBar() {
 
                             <div className="user-icon">
                                 {
-                                    user?.email ? (<Button onClick={() => logout()} variant="outline-light">LogOut</Button>) : (<Button onClick={() =>  navigate('/loginform')} variant="outline-light">Login</Button>)
+                                    user?.email ? (<Button onClick={() => logout()} variant="outline-light">LogOut</Button>) : (<Button onClick={() => navigate('/loginform')} variant="outline-light">Login</Button>)
 
                                 }
 

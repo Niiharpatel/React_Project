@@ -1,11 +1,26 @@
 import React from 'react';
 import './Ourstory.css';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { userAuth } from '../../Pages/Auth/Auth';
 
 function Ourstory() {
-    const navigate = useNavigate();
+    const Navigate = useNavigate();
+
+    let { user } = userAuth();
+
+    function Ourstory() {
+
+        if (!user) {
+            Navigate('/alertbox');
+
+        } else {
+            Navigate('/about');
+        }
+
+    }
     return (
         <>
+
             <div className="our-story-main">
                 <div className="our-story-bg">
                     <div className="our-story-flex">
@@ -20,7 +35,7 @@ function Ourstory() {
                                 <div className="line5">
                                     <p>Facilisis eu faucibus diam cursus pulvinar consectetur purus sem felis, mauris consectetur nisl vitae gravida ultricies sem condimentum aliquet ut sed gravida amet vitae euismod pulvinar volutpat laoreet pharetra.</p>
                                 </div>
-                                <div className="line6"> <button className='our-story-btn' onClick={() => navigate("/aboout")}>Read More</button>
+                                <div className="line6"> <button className='our-story-btn' onClick={() => Ourstory()}>Read More</button>
                                 </div>
                             </div>
                         </div>
@@ -28,6 +43,7 @@ function Ourstory() {
 
                 </div>
             </div>
+
         </>
     );
 }

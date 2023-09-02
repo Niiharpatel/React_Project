@@ -6,18 +6,30 @@ import { useNavigate } from 'react-router-dom';
 
 import "../../Component/Card/Card.css";
 import HomeData from './HomeData.json';
-import NavigationBar from '../../Component/Navbar/NavigationBar';
 import CardStructure from '../../Component/Card/CardStructure';
 import TestimonialMap from '../../Component/Testimonial/TestimonialMap';
 import Ourstory from '../../Component/OurStory/Ourstory';
 import GiftCardCom from '../../Component/GiftCard/GiftCardCom';
-import Footer from '../../Component/Footer/Footer';
+import { userAuth } from '../Auth/Auth';
 
 function Homepage() {
 
     let [data, setData] = useState(HomeData);
 
     const navigate = useNavigate();
+
+    let { user } = userAuth();
+
+    function HomeNavigate() {
+
+        if (!user) {
+            navigate('/alertbox');
+
+        } else {
+            navigate('/plant');
+        }
+    }
+
     return (
         <>
 
@@ -31,14 +43,13 @@ function Homepage() {
                         <div className="heading1"><h1>Let’s Bring the Spring to</h1></div>
                         <div className="heading2"><h1>Your Home</h1></div>
 
-                        <div className="btn-hompage"><Button onClick={() => navigate("/plant")} variant="light">Shop Now</Button>
+                        <div className="btn-hompage"><Button onClick={() => HomeNavigate()} variant="light">Shop Now</Button>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            {/* <WebSlider /> */}
 
 
             <div className='card-flex'>
@@ -60,7 +71,6 @@ function Homepage() {
             <GiftCardCom />
 
 
-            {/* <Footer /> */}
 
 
         </>

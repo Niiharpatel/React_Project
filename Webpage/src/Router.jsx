@@ -11,6 +11,7 @@ import NavigationBar from './Component/Navbar/NavigationBar';
 import Footer from './Component/Footer/Footer';
 import ProtectedRoute from './Pages/ProtectedRoute/ProtectedRoute';
 import AlertBox from './Component/AlertBox/AlertBox';
+import GiftCard from './Pages/GiftCardPage/GiftCard';
 
 export default function Router() {
     return (
@@ -29,6 +30,7 @@ export default function Router() {
                         <Route path='/contact' element={<ProtectedRoute component={<Contact_Page />} />} />
                         <Route path='/LoginForm' element={<LoginForm />} />
                         <Route path='/alertbox' element={<AlertBox />} />
+                        <Route path='/giftcard' element={<GiftCard />} />
                         <Route path='*' element={<Error_404 />} />
 
                     </Routes>
