@@ -12,7 +12,7 @@ function AlertBox() {
         <>
             <div className='alert-main'>
                 <Alert style={{ border: "none" }}>
-                    <Alert.Heading><div class="animate__animated animate__flash animate__infinite	infinite animate__delay-2s  animate__slow">Warning !!!</div></Alert.Heading>
+                    <Alert.Heading><div class="animate__animated animate__flash animate__repeat-3 animate__delay-2s  animate__slow">Warning !!!</div></Alert.Heading>
 
                     <h5 style={{ fontWeight: "500", fontFamily: "emoji" }}>Welcome User,
                         Want to access our website you need to login first!
