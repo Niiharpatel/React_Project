@@ -68,7 +68,7 @@ function Homepage() {
             </div>
 
 
-            <div data-aos="flip-up" data-aos-easing="ease-in-out" data-aos-delay="90">
+            <div>
 
                 <Ourstory />
 
@@ -79,9 +79,9 @@ function Homepage() {
             </div>
 
 
-            <div data-aos="fade-out" data-aos-easing="ease-in-out" data-aos-delay="500">
+            {/* <div data-aos="fade-out" data-aos-easing="ease-in-out" data-aos-delay="200"> */}
                 <GiftCardCom />
-            </div>
+            {/* </div> */}
 
 
 

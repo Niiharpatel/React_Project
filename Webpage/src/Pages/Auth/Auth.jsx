@@ -24,7 +24,7 @@ export default function Auth({ children }) {
 
     function logout() {
         localStorage.removeItem("loginUser");
-        setUser(null);
+        setUser();
         navigate('/');
     }
 

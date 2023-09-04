@@ -1,15 +1,21 @@
-.gift-card-bgimg {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url("../../../public/images/pexels-oleksandr-tiupa-192136.jpg");
-  background-position: center;
+/* .gift-card-bgimg {
+  background-image: url("../../../public/images/pexels-oleksandr-tiupa-192136.jpg");
+  position: relative;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-position: center center;
   background-size: cover;
   height: 100vh;
-}
-
+} */
+/* .gift-card-bgimg:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+} */
 .giftcard-bg {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.4),
