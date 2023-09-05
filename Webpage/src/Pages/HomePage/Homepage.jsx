@@ -80,7 +80,7 @@ function Homepage() {
 
 
             {/* <div data-aos="fade-out" data-aos-easing="ease-in-out" data-aos-delay="200"> */}
-                <GiftCardCom />
+            <GiftCardCom />
             {/* </div> */}
 
 
