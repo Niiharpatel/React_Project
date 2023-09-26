@@ -17,19 +17,12 @@
   z-index: 0;
 } */
 .giftcard-bg {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    
-    url("https://images.pexels.com/photos/1454794/pexels-photo-1454794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: url("https://images.pexels.com/photos/1454794/pexels-photo-1454794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   padding: 85px 85px;
   width: fit-content;
   background-position: center;
   background-size: cover;
 }
-
 .giftcard-content-fix {
   display: flex;
   justify-content: center;

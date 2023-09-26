@@ -8,7 +8,7 @@ export default function AboutPageCom2() {
             <div className="com2-main">
                 <div className="container">
                     <div className="video-div">
-                        <ReactPlayer url='https://youtu.be/sVPYIRF9RCQ' controls={true} height='100vh' width='fit-to-content' playIcon={true}  />
+                        <ReactPlayer url='https://youtu.be/sVPYIRF9RCQ' controls={true} height='100vh' width='fit-to-content'/>
                     </div>
                 </div>
             </div>
